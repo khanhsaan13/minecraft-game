@@ -1,0 +1,72 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+}
+
+.background-img{
+  background-image: url("./img/background.jpeg");
+  background-size: 1500px;
+}
+
+#level-title{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+  text-shadow: 4px 4px 3px black  ;
+  
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.game-continue {
+  background-color: green;
+  opacity: 0.8;
+}
+
+.village {
+  background-color: white;
+  background-image: url("./img/village.webp");
+}
+
+.steve {
+  background-color: white;
+  background-image: url("./img/steve.jpeg");
+}
+
+.pig {
+  background-color: white;
+  background-image: url("./img/pig.jpg");
+  background-size: 150%;
+  background-position: top 10px left 10px;
+}
+
+.sheep {
+  background-color: white;
+  background-image: url("./img/sheep.png");
+  background-size: 100%;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
