@@ -82,10 +82,6 @@ function checkAnswer(currentLevel){
         userClickedPattern = [];
         var correct = new Audio("./sounds/Correct.mp3");
         correct.play();
-        $("body").addClass("game-continue");
-        setTimeout(function(){
-            $("body").removeClass("game-continue");
-        }, 200);
         setTimeout(function(){
             nextSequence();
             $("h1").text("Level " + level);
