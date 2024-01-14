@@ -29,6 +29,7 @@ function animatePress(currentColor){
     })
 }
 
+
 var track = 0;
 var level = 0;
 
@@ -41,11 +42,21 @@ $(document).on("keydown", function(){
     }
 });
 
+document.addEventListener("touchstart", function(e) {
+    e.preventDefault();
+    track++;
+    if(track === 1){
+        nextSequence();
+        $("h1").text("Level " + level);
+        level++;
+    }
+});
+
 $(".btn").on("click", function(){
     var userChosenColour = $(this).attr("id");
     userClickedPattern.push(userChosenColour);
     playSound(userChosenColour);
-    animatePress();
+    animatePress(userChosenColour);
     checkAnswer(userChosenColour);
 });
 
@@ -59,7 +70,7 @@ function checkAnswer(currentLevel){
     else{
         check = false;
         // console.log("false");
-        $("h1").html("Game Over, Press Any Key to Restart");
+        $("h1").html("Game Over, Press Any Key Or Touch Screen to Restart");
         var wrong = new Audio("./sounds/wrong.mp3");
         wrong.play();
         // move the background img
@@ -75,8 +86,12 @@ function checkAnswer(currentLevel){
         setTimeout(function(){
             $("body").addClass("background-img")
         }, 200);
-        
+        // click to restart
         $(document).on("keydown", startOver);
+        // touch to restart
+        document.addEventListener("touchstart", function(){
+            startOver()
+        });
     }
     if(gamePattern.length === userClickedPattern.length && check === true){
         // reset userClickedPattern
@@ -109,13 +124,3 @@ function checkAnswer(currentLevel){
 function startOver(){
     location.reload();
 }
-
-
-
-
-
-
-
-
-
-
