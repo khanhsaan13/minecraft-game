@@ -92,11 +92,11 @@ function checkAnswer(currentLevel){
             track == 0;
             level++;
         }, 1000);
-       // move the background img
+        // move the background img
         $("body").removeClass("background-img");
         // add background color game-over
         $("body").addClass("game-continue");
-        
+
         setTimeout(function(){
             $("body").removeClass("game-continue")
         }, 200);
