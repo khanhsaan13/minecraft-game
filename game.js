@@ -33,6 +33,8 @@ var track = 0;
 var level = 0;
 
 $(document).on("keydown", function(){
+    // test
+    alert("Game start");
     track++;
     if(track === 1){
         nextSequence();
