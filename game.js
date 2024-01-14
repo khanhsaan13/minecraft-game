@@ -79,6 +79,7 @@ function checkAnswer(currentLevel){
         $(document).on("keydown", startOver);
     }
     if(gamePattern.length === userClickedPattern.length && check === true){
+        // reset userClickedPattern
         userClickedPattern = [];
         var correct = new Audio("./sounds/Correct.mp3");
         correct.play();
@@ -93,6 +94,7 @@ function checkAnswer(currentLevel){
         // add background color game-over
         $("body").addClass("game-continue");
 
+        // remove game-continue effect after 200 miliseconds
         setTimeout(function(){
             $("body").removeClass("game-continue")
         }, 200);
@@ -101,7 +103,6 @@ function checkAnswer(currentLevel){
         setTimeout(function(){
             $("body").addClass("background-img")
         }, 200);
-        
     }
 }
 
