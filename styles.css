@@ -1,11 +1,14 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  margin: 0;
+  padding: 0;
 }
 
 .background-img{
-  background-image: url("./img/background.jpeg");
-  background-size: 1500px;
+  background-image: url("./img/background_1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: auto;
 }
 
 #level-title{
@@ -69,4 +72,17 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media (max-width: 1000px){
+  .body{
+    background-color: black;
+  }
+  .background-img{
+    background-image: url("./img/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: auto;
+    height: 100vh;
+  }
 }
